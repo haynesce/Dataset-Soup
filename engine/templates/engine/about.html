@@ -1,0 +1,19 @@
+
+def about(request):
+    return render(request, 'engine/about.html')
+
+
+{% extends 'engine/base.html'%}
+{% block content%}
+<style>
+    .about-search {
+        margin-top: 1%;
+        text-align: center;
+    }
+</style>
+    <div class="about-search">
+        <h1>About Dataset Soup</h1>
+        <p>This is a simple search engine made in python. It uses Google Datasets search engine to present queried information. </p>
+        <p>This project was assembled by Chloe Haynes for CSC 491 at Concordia University Ann Arbor/Wisconsin.</p>
+    </div>
+{% endblock content%}

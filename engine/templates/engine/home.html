@@ -1,0 +1,27 @@
+{% extends 'engine/base.html' %}
+{% load static %}
+{% block content %}
+
+<style> 
+		div {
+		text-align: center;
+		}
+		.search-bar{
+		margin-top: 7%;
+		}
+	</style>
+<div class="home">
+	<h1>Dataset Soup</h1>
+        <img src="../static/images/soup.png" alt="soup search"  width="150" height="150">
+        <div class="search-bar">
+            <form method="POST" action="results">
+                {% csrf_token %}
+                <input class="form-control form-control-lg" type="text" placeholder="Search for anything" name="search">
+                <br />
+                <button type="submit" class="btn btn-dark">Search</button>
+
+            </form>
+        </div>
+       
+    </div>
+{% endblock content %}
